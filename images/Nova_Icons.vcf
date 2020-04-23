@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION;TYPE=WORK:3.0
+FN;CHARSET=UTF-8:Vincent Le Moign
+N;CHARSET=UTF-8:Vincent Le Moign;;;;
+PROFILE:VCARD
+ADR;CHARSET=UTF-8:;;16 Lamington Hill Rd;Stratham;NH;03885-2445;USA
+EMAIL:vincent@webalys.com
+ORG;CHARSET=UTF-8:Webalys
+URL:https://webalys.com/nova
+END:VCARD
