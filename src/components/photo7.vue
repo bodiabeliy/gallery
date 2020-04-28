@@ -1,12 +1,12 @@
 <template>
-  <figure @click="visible =!visible" class="gallery__item gallery__item--1">
-       <v-card style=" height:270px">
-         <img  src="https://picsum.photos/510/300?random" alt="Gallery image 1" class="gallery__img">
+  <figure @click="visible =!visible" class="gallery__item gallery__item--7">
+       <v-card style=" height:200px">
+         <img src="https://picsum.photos/235/300?random" alt="Gallery image 7" class="gallery__img">
        </v-card>
       <div v-if="visible" class="box" >
         <v-icon @click="visible =! visible" class="fas fa-times" >fas fa-plus-circle</v-icon>
          <div class="container1">
-           <img  src="https://picsum.photos/510/300?random" alt="Gallery image 1" class="gallery__img">
+           <img src="https://picsum.photos/235/300?random" alt="Gallery image 7" class="gallery__img">
            <div class="comment">
              <v-col md="9">
                <i class="far fa-envelope"></i>
@@ -68,7 +68,7 @@ style="height: 200px"
       <div class="text">
         <h2></h2>
         <p></p>
-        <div class="icon">
+        <div class="icon1">
           <v-badge class="plus green1" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
@@ -181,33 +181,39 @@ style="height: 200px"
 
 </script>
 
-
 <style>
-  .icon
+  .icon6
   {
-    padding: 0;
-    margin-left: 250px;
-    margin-top:120px;
+    position:relative;
+    margin-left: 50px;
+    margin-top: 590px;
   }
 
-  .green,
-  .blue
+  .green6
   {
-    opacity:0;
-  }
-
-  .gallery__item--1:hover .green
-  {
-    opacity:1;
     background: green;
-    width: 45px;
-    height: 45px;
+    opacity: 0;
   }
-  .gallery__item--1:hover .blue
+
+  .gallery__item--7:hover .green6
   {
-    opacity:1;
-    background: blue;
-    width: 45px;
-    height: 45px;
+    height: 50px;
+    width: 50px;
+    opacity: 1;
   }
+
+  .blue6
+  {
+    background: blue;
+    opacity: 0;
+  }
+
+  .gallery__item--7:hover .blue6
+  {
+    height: 50px;
+    width: 50px;
+    opacity: 1;
+  }
+
+
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <figure @click="visible =!visible" class="gallery__item gallery__item--1">
-       <v-card style=" height:270px">
-         <img  src="https://picsum.photos/510/300?random" alt="Gallery image 1" class="gallery__img">
+  <figure @click="visible =!visible" class="gallery__item gallery__item--5">
+       <v-card style=" height:160px">
+         <img src="https://picsum.photos/234/300?random" alt="Gallery image 5" class="gallery__img">
        </v-card>
       <div v-if="visible" class="box" >
         <v-icon @click="visible =! visible" class="fas fa-times" >fas fa-plus-circle</v-icon>
          <div class="container1">
-           <img  src="https://picsum.photos/510/300?random" alt="Gallery image 1" class="gallery__img">
+           <img src="https://picsum.photos/234/300?random" alt="Gallery image 5" class="gallery__img">
            <div class="comment">
              <v-col md="9">
                <i class="far fa-envelope"></i>
@@ -68,7 +68,7 @@ style="height: 200px"
       <div class="text">
         <h2></h2>
         <p></p>
-        <div class="icon">
+        <div class="icon1">
           <v-badge class="plus green1" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
@@ -96,7 +96,6 @@ style="height: 200px"
       </div>
   </figure>
 </template>
-
 <script>
   import todoItem from './todoItem'
   export default{
@@ -181,33 +180,38 @@ style="height: 200px"
 
 </script>
 
-
 <style>
-  .icon
+  .icon4
   {
-    padding: 0;
-    margin-left: 250px;
-    margin-top:120px;
+    position:relative;
+    margin-left: 375px;
+    margin-top: 390px;
+    opacity: 0
   }
 
-  .green,
-  .blue
+  .green4
   {
-    opacity:0;
-  }
-
-  .gallery__item--1:hover .green
-  {
-    opacity:1;
     background: green;
-    width: 45px;
-    height: 45px;
+    opacity: 0;
   }
-  .gallery__item--1:hover .blue
+
+  .gallery__item--5:hover .green4
   {
-    opacity:1;
+    height: 50px;
+    width: 50px;
+    opacity: 0;
+  }
+
+  .blue4
+  {
     background: blue;
-    width: 45px;
-    height: 45px;
+    opacity: 0;
+  }
+
+  .gallery__item--5:hover .blue4
+  {
+    height: 50px;
+    width: 50px;
+    opacity: 0;
   }
 </style>

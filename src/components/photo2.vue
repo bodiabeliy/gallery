@@ -1,12 +1,12 @@
 <template>
-  <figure @click="visible =!visible" class="gallery__item gallery__item--1">
-       <v-card style=" height:270px">
-         <img  src="https://picsum.photos/510/300?random" alt="Gallery image 1" class="gallery__img">
+  <figure @click="visible =!visible" class="gallery__item gallery__item--2">
+       <v-card style=" height:431px">
+         <img src="https://picsum.photos/499/432?random" alt="Gallery image 2" class="gallery__img">
        </v-card>
       <div v-if="visible" class="box" >
         <v-icon @click="visible =! visible" class="fas fa-times" >fas fa-plus-circle</v-icon>
          <div class="container1">
-           <img  src="https://picsum.photos/510/300?random" alt="Gallery image 1" class="gallery__img">
+           <img src="https://picsum.photos/499/432?random" alt="Gallery image 2" class="gallery__img">
            <div class="comment">
              <v-col md="9">
                <i class="far fa-envelope"></i>
@@ -68,7 +68,7 @@ style="height: 200px"
       <div class="text">
         <h2></h2>
         <p></p>
-        <div class="icon">
+        <div class="icon1">
           <v-badge class="plus green1" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
@@ -181,33 +181,181 @@ style="height: 200px"
 
 </script>
 
-
 <style>
-  .icon
-  {
-    padding: 0;
-    margin-left: 250px;
-    margin-top:120px;
+  .btn-primary{
+    position:absolute;
+    margin-left: 230px;
+    margin-top: 390px;
+    z-index:4;
   }
 
-  .green,
-  .blue
+  .minus
   {
-    opacity:0;
+    bottom: 45px;
+    right: 130px;
+  }
+  .plus{
+    position: fixed;
+    bottom: 45px;
+    right: 170px;
+  }
+    input[type="file"]{
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    display:none;
+  }
+  .fa-plus-circle{
+    color: #00CED1 !important;
   }
 
-  .gallery__item--1:hover .green
-  {
-    opacity:1;
-    background: green;
-    width: 45px;
-    height: 45px;
+  .fa-plus-circle:hover {
+    color: #008B8B !important;
   }
-  .gallery__item--1:hover .blue
-  {
-    opacity:1;
-    background: blue;
-    width: 45px;
-    height: 45px;
+
+  .fa-times{
+    position: absolute;
+    padding-left: 90%;
+    top: 60px;
   }
+
+  .blue10 {
+    right: 320px;
+    bottom: 190px;
+  }
+
+
+
+  .blue10:hover {
+    background: red;
+    color: #fff !important;
+    bottom: 185px;
+    right: 340px;
+  }
+
+  .green10 {
+    right: 130px;
+    bottom: 890px;
+  }
+
+  .green10:hover {
+    background: #008000;
+    color: #fff	 !important;
+    bottom:195px;
+    right: 120px;
+  }
+
+  .fa-envelope
+  {
+    transform: skew(-45deg);
+    font-size: 40px;
+    left: 290px;
+    position: relative;
+    top: 560px;
+    background: #fff;
+    color: #00CED1 !important;
+    z-index:3
+
+  }
+
+  .pictext{
+    display:block;
+    padding-bottom: 23px;
+    text-align: center
+  }
+
+  .box
+  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index:3
+  }
+
+  .container1{
+    display:flex;
+    height: 630px;
+    width: 900px;
+    background: #fff;
+  }
+
+  .container1 img{
+  height: 560px;
+  width: 450px;
+  }
+
+  p {
+    color:grey;
+    font-family: 'Anton', Medium, sans-serif;
+    font-size:40px;
+    font-weight: 600;
+    line-height: 1.7;
+
+  }
+
+  .comment
+  {
+    display:inline-block;
+    line-height: .7;
+  }
+
+  .ShowDialog{
+    width: 500px;
+    height: 50px;
+    background: #fff;
+  }
+
+  .gallery__item--2 {
+      grid-column-start: 7;
+      grid-column-end: 10;
+      grid-row-start: 1;
+      grid-row-end: 6;
+
+  }
+
+
+  .green1
+  {
+    color: rgb(100,100,100) !important;
+    top: 130px;
+    left: 210px;
+    background: #fff;
+    opacity: 0;
+
+  }
+
+
+  .gallery__item--2:hover .green1
+  {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  .blue1
+  {
+
+    top: 80px;
+    left: 140px;
+    background: #fff;
+    opacity: 0;
+  }
+
+  .gallery__item--2:hover .blue1
+  {
+    color: rgb(100,100,100) !important;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+
+
+  .icon1
+  {
+    position:absolute;
+    margin-left: 660px;
+    margin-top: 300px;
+  }
+
 </style>
