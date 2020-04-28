@@ -68,31 +68,7 @@ style="height: 200px"
       <div class="text">
         <h2></h2>
         <p></p>
-        <div class="icon7">
-          <v-badge class="plus green7" color="#00f"  avatar  bordered  overlap>
-            <template v-slot:badge>
-              <v-avatar >
-                {{likes}}
-              </v-avatar>
-            </template>
 
-            <v-avatar size="40">
-              <i class="fa fa-thumbs-up"></i>
-              </v-avatar>
-          </v-badge>
-
-          <v-badge class="minus blue7" color="#00f"  avatar  bordered  overlap>
-            <template v-slot:badge>
-              <v-avatar>
-                {{dislikes}}
-              </v-avatar>
-            </template>
-
-            <v-avatar size="40">
-              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
-            </v-avatar>
-          </v-badge>
-         </div>
       </div>
   </figure>
 </template>
@@ -182,13 +158,28 @@ style="height: 200px"
 </script>
 
 <style>
+.plus{
+  margin-right: 300px;
+  margin-bottom: -25px;
+}
+
+  .gallery__item--8:hover .green7
+  {
+    color: rgb(100,100,100) !important;
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+
+
   .icon7
   {
-    opacity: 0;
+    position:absolute;
+    margin-left: 660px;
+    margin-top: 300px;
   }
 
   .green7{
-    background: white;
 
   }
   .blue7
@@ -204,11 +195,4 @@ style="height: 200px"
     height: 50px;
   }
 
-  .gallery__item--8:hover .green7
-  {
-    color: rgb(100,100,100) !important;
-    opacity: 1;
-    width: 50px;
-    height: 50px;
-  }
 </style>

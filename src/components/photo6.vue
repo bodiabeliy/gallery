@@ -163,8 +163,7 @@ style="height: 200px"
 <style>
   .icon5
   {
-    position:absolute;
-    margin-left: 925px;
+    margin-left: 25px;
     margin-top: 280px;
   }
 

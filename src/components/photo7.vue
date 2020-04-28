@@ -182,38 +182,7 @@ style="height: 200px"
 </script>
 
 <style>
-  .icon6
-  {
-    position:relative;
-    margin-left: 50px;
-    margin-top: 590px;
+  .plus{
+    margin-right: 880px;
   }
-
-  .green6
-  {
-    background: green;
-    opacity: 0;
-  }
-
-  .gallery__item--7:hover .green6
-  {
-    height: 50px;
-    width: 50px;
-    opacity: 1;
-  }
-
-  .blue6
-  {
-    background: blue;
-    opacity: 0;
-  }
-
-  .gallery__item--7:hover .blue6
-  {
-    height: 50px;
-    width: 50px;
-    opacity: 1;
-  }
-
-
 </style>

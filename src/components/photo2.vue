@@ -225,26 +225,6 @@ style="height: 200px"
   }
 
 
-
-  .blue10:hover {
-    background: red;
-    color: #fff !important;
-    bottom: 185px;
-    right: 340px;
-  }
-
-  .green10 {
-    right: 130px;
-    bottom: 890px;
-  }
-
-  .green10:hover {
-    background: #008000;
-    color: #fff	 !important;
-    bottom:195px;
-    right: 120px;
-  }
-
   .fa-envelope
   {
     transform: skew(-45deg);
@@ -313,49 +293,6 @@ style="height: 200px"
       grid-row-start: 1;
       grid-row-end: 6;
 
-  }
-
-
-  .green1
-  {
-    color: rgb(100,100,100) !important;
-    top: 130px;
-    left: 210px;
-    background: #fff;
-    opacity: 0;
-
-  }
-
-
-  .gallery__item--2:hover .green1
-  {
-    opacity: 1;
-    width: 50px;
-    height: 50px;
-  }
-  .blue1
-  {
-
-    top: 80px;
-    left: 140px;
-    background: #fff;
-    opacity: 0;
-  }
-
-  .gallery__item--2:hover .blue1
-  {
-    color: rgb(100,100,100) !important;
-    opacity: 1;
-    width: 50px;
-    height: 50px;
-  }
-
-
-  .icon1
-  {
-    position:absolute;
-    margin-left: 660px;
-    margin-top: 300px;
   }
 
 </style>

@@ -183,20 +183,16 @@ style="height: 200px"
 <style>
   .icon4
   {
-    position:relative;
     margin-left: 375px;
     margin-top: 390px;
     opacity: 0
   }
 
-  .green4
-  {
-    background: green;
-    opacity: 0;
-  }
+
 
   .gallery__item--5:hover .green4
   {
+    
     height: 50px;
     width: 50px;
     opacity: 0;
