@@ -66,10 +66,20 @@ style="height: 200px"
          </div>
       </div>
       <div class="text">
-        <h2></h2>
-        <p></p>
         <div class="icon1">
-          <v-badge class="plus green1" color="#00f"  avatar  bordered  overlap>
+          <v-badge class="coment2" color="#00f"  avatar  bordered  overlap>
+            <template v-slot:badge>
+              <v-avatar>
+                {{comment}}
+              </v-avatar>
+            </template>
+
+            <v-avatar size="40">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+            </v-avatar>
+          </v-badge>
+
+          <v-badge class="plus green12" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
                 {{likes}}
@@ -81,7 +91,7 @@ style="height: 200px"
               </v-avatar>
           </v-badge>
 
-          <v-badge class="minus blue1" color="#00f"  avatar  bordered  overlap>
+          <v-badge class="minus blue12" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
                 {{dislikes}}
@@ -189,16 +199,45 @@ style="height: 200px"
     z-index:4;
   }
 
+
   .minus
   {
     bottom: 45px;
     right: 130px;
   }
-  .plus{
-    position: fixed;
-    bottom: 45px;
-    right: 170px;
+  .coment2{
+    left: 720px;
+    top: 450px;
+    background:grey;
+    opacity: 0;
   }
+
+  .gallery__item--2:hover .coment2{
+    transition:1s;
+      opacity: 1;
+    }
+.green12{
+    left: 750px;
+    top: 450px;
+    background:grey;
+    opacity: 0;
+  }
+  .gallery__item--2:hover .green12{
+    transition:1s;
+      opacity: 1;
+    }
+
+  .blue12{
+      left: 490px;
+      top: 450px;
+      background:grey;
+      opacity: 0;
+    }
+
+    .gallery__item--2:hover .blue12{
+      transition:1s;
+        opacity: 1;
+      }
     input[type="file"]{
     position: absolute;
     bottom: 90px;
@@ -222,20 +261,6 @@ style="height: 200px"
   .blue10 {
     right: 320px;
     bottom: 190px;
-  }
-
-
-  .fa-envelope
-  {
-    transform: skew(-45deg);
-    font-size: 40px;
-    left: 290px;
-    position: relative;
-    top: 560px;
-    background: #fff;
-    color: #00CED1 !important;
-    z-index:3
-
   }
 
   .pictext{

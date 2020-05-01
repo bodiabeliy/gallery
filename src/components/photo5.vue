@@ -68,8 +68,20 @@ style="height: 200px"
       <div class="text">
         <h2></h2>
         <p></p>
-        <div class="icon1">
-          <v-badge class="plus green1" color="#00f"  avatar  bordered  overlap>
+        <div class="icon5">
+          <v-badge class="coment5" color="#00f"  avatar  bordered  overlap>
+            <template v-slot:badge>
+              <v-avatar>
+                {{comment}}
+              </v-avatar>
+            </template>
+
+            <v-avatar size="40">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+            </v-avatar>
+          </v-badge>
+
+          <v-badge class="plus green4" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
                 {{likes}}
@@ -80,8 +92,7 @@ style="height: 200px"
               <i class="fa fa-thumbs-up"></i>
               </v-avatar>
           </v-badge>
-
-          <v-badge class="minus blue1" color="#00f"  avatar  bordered  overlap>
+          <v-badge class="minus blue4" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
                 {{dislikes}}
@@ -92,7 +103,7 @@ style="height: 200px"
               <i class="fa fa-thumbs-down" aria-hidden="true"></i>
             </v-avatar>
           </v-badge>
-         </div>
+        </div>
       </div>
   </figure>
 </template>
@@ -181,33 +192,82 @@ style="height: 200px"
 </script>
 
 <style>
+  .box
+  {
+    z-index:4
+  }
+
   .icon4
   {
-    margin-left: 375px;
-    margin-top: 390px;
-    opacity: 0
+    position:absolute;
+    margin-left: 55px;
+    margin-top: 310px;
+  }
+  .coment5{
+
+    left: 15px;
+    top: 120px;
+    background:grey;
+    opacity: 0;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
   }
 
-
-
+  .green4
+  {
+    left: 910px;
+    background: grey;
+    top: 80px;
+    opacity: 0;
+    z-index: 3;
+  }
+  .gallery__item--5:hover .coment5
+  {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
   .gallery__item--5:hover .green4
   {
-    
-    height: 50px;
-    width: 50px;
-    opacity: 0;
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
   }
+
 
   .blue4
   {
-    background: blue;
+    height: 40px;
+    width: 40px;
+    left: 870px;
+    top: 50px;
+    background: grey;
     opacity: 0;
+    z-index: 3;
   }
 
   .gallery__item--5:hover .blue4
   {
-    height: 50px;
-    width: 50px;
-    opacity: 0;
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+  }
+
+  .gallery__item--5:hover .coment5{
+    transition:1s;
+      opacity: 1;
+    }
+  .gallery__item--5:hover .green4
+  {
+    transition:1s;
+    opacity: 1;
+  }
+  .gallery__item--5:hover .blue4
+  {
+    transition:1s;
+    opacity: 1;
   }
 </style>

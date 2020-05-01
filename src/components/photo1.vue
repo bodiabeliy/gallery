@@ -196,18 +196,4 @@ style="height: 200px"
     opacity:0;
   }
 
-  .gallery__item--1:hover .green
-  {
-    opacity:1;
-    background: green;
-    width: 45px;
-    height: 45px;
-  }
-  .gallery__item--1:hover .blue
-  {
-    opacity:1;
-    background: blue;
-    width: 45px;
-    height: 45px;
-  }
 </style>

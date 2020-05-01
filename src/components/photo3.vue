@@ -69,9 +69,40 @@ style="height: 200px"
       <h2></h2>
       <p></p>
       <div class="icon2">
-        <v-icon class="green2">mdi-thumb-up</v-icon>
-        <v-icon class="blue2">mdi-thumb-down</v-icon>
-      </div>
+        <v-badge class="coment3" color="#00f"  avatar  bordered  overlap>
+          <template v-slot:badge>
+            <v-avatar>
+              {{comment}}
+            </v-avatar>
+          </template>
+
+          <v-avatar size="40">
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+          </v-avatar>
+        </v-badge>
+
+        <v-badge class="plus green2" color="#00f"  avatar  bordered  overlap>
+          <template v-slot:badge>
+            <v-avatar >
+              {{likes}}
+            </v-avatar>
+          </template>
+
+          <v-avatar size="40">
+            <i class="fa fa-thumbs-up"></i>
+            </v-avatar>
+        </v-badge>
+        <v-badge class="minus blue2" color="#00f"  avatar  bordered  overlap>
+          <template v-slot:badge>
+            <v-avatar>
+              {{dislikes}}
+            </v-avatar>
+          </template>
+
+          <v-avatar size="40">
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+          </v-avatar>
+        </v-badge>      </div>
     </div>
 </figure>
 </template>
@@ -293,14 +324,22 @@ style="height: 200px"
 
   .icon2
   {
-    position:relative;
     margin-left: 932px;
     margin-top: 135px;
+    z-index: 3;
+  }
+  .coment3{
+    left: 40px;
+    top: 60px;
+    background:grey;
+    opacity: 0;
   }
 
   .green2
   {
-    background: green;
+    background: grey;
+    left: 55px;
+    top: 63px;
     opacity: 0;
   }
 
@@ -313,14 +352,23 @@ style="height: 200px"
 
   .blue2
   {
-    background: blue;
+    background: grey;
+    right: 230px;
+    top: 63px;
     opacity: 0;
   }
-
+  .gallery__item--3:hover .coment3{
+    transition:1s;
+      opacity: 1;
+    }
+  .gallery__item--3:hover .green2
+  {
+    transition:1s;
+    opacity: 1;
+  }
   .gallery__item--3:hover .blue2
   {
-    height: 40px;
-    width: 40px;
+    transition:1s;
     opacity: 1;
   }
 

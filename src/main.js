@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+import 'material-design-icons-iconfont/dist/material-design-icons.css' // Ensure you are using css-loader
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-
 import BootstrapVue from 'bootstrap-vue';
 
 import vuetify from './plugins/vuetify'

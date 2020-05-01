@@ -69,8 +69,40 @@
         <h2></h2>
         <p></p>
         <div class="icon3">
-          <v-icon class="green3">mdi-thumb-up</v-icon>
-          <v-icon class="blue3">mdi-thumb-down</v-icon>
+          <v-badge class="coment4" color="#00f"  avatar  bordered  overlap>
+            <template v-slot:badge>
+              <v-avatar>
+                {{comment}}
+              </v-avatar>
+            </template>
+
+            <v-avatar size="40">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+            </v-avatar>
+          </v-badge>
+
+          <v-badge class="plus green3" color="#00f"  avatar  bordered  overlap>
+            <template v-slot:badge>
+              <v-avatar >
+                {{likes}}
+              </v-avatar>
+            </template>
+
+            <v-avatar size="40">
+              <i class="fa fa-thumbs-up"></i>
+              </v-avatar>
+          </v-badge>
+          <v-badge class="minus blue3" color="#00f"  avatar  bordered  overlap>
+            <template v-slot:badge>
+              <v-avatar>
+                {{dislikes}}
+              </v-avatar>
+            </template>
+
+            <v-avatar size="40">
+              <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+            </v-avatar>
+          </v-badge>
         </div>
       </div>
   </figure>
@@ -168,38 +200,84 @@
       grid-row-end: 6;
   }
 
+  .box
+  {
+    z-index:4
+  }
+
   .icon3
   {
     position:absolute;
     margin-left: 55px;
     margin-top: 310px;
   }
+  .coment4{
+
+    left: 815px;
+    top: 120px;
+    background:grey;
+    opacity: 0;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+  }
 
   .green3
   {
-    background: green;
+    left: 910px;
+    background: grey;
+    top: 80px;
     opacity: 0;
+    z-index: 3;
   }
-
+  .gallery__item--4:hover .coment4
+  {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
   .gallery__item--4:hover .green3
   {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     opacity: 1;
+    z-index: 3;
   }
 
 
   .blue3
   {
-    background: blue;
+    height: 40px;
+    width: 40px;
+    left: 870px;
+    top: 50px;
+    background: grey;
     opacity: 0;
+    z-index: 3;
   }
 
   .gallery__item--4:hover .blue3
   {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     opacity: 1;
   }
+
+  .gallery__item--4:hover .coment4{
+    transition:1s;
+      opacity: 1;
+    }
+  .gallery__item--4:hover .green3
+  {
+    transition:1s;
+    opacity: 1;
+  }
+  .gallery__item--4:hover .blue3
+  {
+    transition:1s;
+    opacity: 1;
+  }
+
 
 </style>
