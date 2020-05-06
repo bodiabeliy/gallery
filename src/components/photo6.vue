@@ -68,9 +68,42 @@ style="height: 200px"
     <div class="text">
       <h2></h2>
       <p></p>
-      <div class="icon3">
-        <v-icon class="green3">mdi-thumb-up</v-icon>
-        <v-icon class="blue3">mdi-thumb-down</v-icon>
+      <div class="icon6">
+        <div class="hover6"></div>
+        <v-badge class="coment6" color="#00f"  avatar  bordered  overlap>
+          <template v-slot:badge>
+            <v-avatar>
+              {{comment}}
+            </v-avatar>
+          </template>
+
+          <v-avatar size="40">
+            <i class="fa fa-commenting" aria-hidden="true"></i>
+          </v-avatar>
+        </v-badge>
+
+        <v-badge class="plus green5" color="#00f"  avatar  bordered  overlap>
+          <template v-slot:badge>
+            <v-avatar >
+              {{likes}}
+            </v-avatar>
+          </template>
+
+          <v-avatar size="40">
+            <i class="fa fa-thumbs-up"></i>
+            </v-avatar>
+        </v-badge>
+        <v-badge class="minus blue5" color="#00f"  avatar  bordered  overlap>
+          <template v-slot:badge>
+            <v-avatar>
+              {{dislikes}}
+            </v-avatar>
+          </template>
+
+          <v-avatar size="40">
+            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+          </v-avatar>
+        </v-badge>
       </div>
     </div>
 </figure>
@@ -161,36 +194,98 @@ style="height: 200px"
   </script>
 
 <style>
-  .icon5
+  .icon6
   {
     margin-left: 25px;
     margin-top: 280px;
   }
 
-  .green5
-  {
-    background: green;
+  .hover6{
+    position:absolute;
     opacity: 0;
+    left: 413px;
+    top: 455px;
+    width: 255px;
+    height: 70px;
+    background: #fff;
+    z-index: 1;
   }
 
+    .gallery__item--6:hover .hover6{
+      opacity: 1;
+      transition:1s;
+    }
+
+  .coment6{
+
+    left: 390px;
+    top: 130px;
+    background: #fff;
+    color:grey !important;
+    opacity: 0;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .plus.green5
+  {
+    background: #fff;
+    color:grey !important;
+    left: 475px;
+    top: 130px;
+    opacity: 0;
+    z-index: 3;
+  }
+  .gallery__item--6:hover .coment6
+  {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
   .gallery__item--6:hover .green5
   {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
+
+
+  .minus.blue5
+  {
+    left: 210px;
+    height: 40px;
+    width: 40px;
+    top: 130px;
+    margin-top: 50px;
+    background: #fff;
+    color:grey !important;
+    opacity: 0;
+    z-index: 3;
+  }
+
+  .gallery__item--5:hover .blue5
+  {
+    height: 40px;
+    width: 40px;
     opacity: 1;
   }
 
-  .blue5
+  .gallery__item--6:hover .coment6{
+    transition:1s;
+      opacity: 1;
+    }
+  .gallery__item--6:hover .green5
   {
-    background: blue;
-    opacity: 0;
+    transition:1s;
+    opacity: 1;
   }
-
   .gallery__item--6:hover .blue5
   {
-    height: 50px;
-    width: 50px;
+    transition:1s;
     opacity: 1;
   }
-
 </style>

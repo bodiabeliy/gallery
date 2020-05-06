@@ -4,9 +4,9 @@
          <img src="https://picsum.photos/499/432?random" alt="Gallery image 2" class="gallery__img">
        </v-card>
       <div v-if="visible" class="box" >
-        <v-icon @click="visible =! visible" class="fas fa-times" >fas fa-plus-circle</v-icon>
+        <v-icon @click="visible != visible" class="fas fa-times" >fas fa-plus-circle</v-icon>
          <div class="container1">
-           <img src="https://picsum.photos/499/432?random" alt="Gallery image 2" class="gallery__img">
+           <img src="https://picsum.photos/499/432?random" style="width:452px" alt="Gallery image 2" class="gallery__img">
            <div class="comment">
              <v-col md="9">
                <i class="far fa-envelope"></i>
@@ -40,7 +40,7 @@ style="height: 200px"
 <v-text-field label="Type your nickname here..."></v-text-field>
 </div>
 <v-textarea auto-grow  outlined  rows="1" row-height="15" class="ShowDialog" placeholder="Add your comment..."></v-textarea>
-<v-badge class="plus" color="#00f"  avatar  bordered  overlap>
+<v-badge class="plus" color="#2F4F4F"  avatar  bordered  overlap>
 <template v-slot:badge>
 <v-avatar >
  {{likes}}
@@ -51,7 +51,7 @@ style="height: 200px"
 <i class="fa fa-thumbs-up"></i>
 </v-avatar>
 </v-badge>
-<v-badge class="minus" color="#00f"  avatar  bordered  overlap>
+<v-badge class="minus" color="#2F4F4F"  avatar  bordered  overlap>
      <template v-slot:badge>
        <v-avatar>
          {{dislikes}}
@@ -67,7 +67,8 @@ style="height: 200px"
       </div>
       <div class="text">
         <div class="icon1">
-          <v-badge class="coment2" color="#00f"  avatar  bordered  overlap>
+          <div class="hover"></div>
+          <v-badge class="coment2" color="#A9A9A9"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
                 {{comment}}
@@ -79,7 +80,7 @@ style="height: 200px"
             </v-avatar>
           </v-badge>
 
-          <v-badge class="plus green12" color="#00f"  avatar  bordered  overlap>
+          <v-badge class="plus green12" color="#A9A9A9"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
                 {{likes}}
@@ -91,7 +92,7 @@ style="height: 200px"
               </v-avatar>
           </v-badge>
 
-          <v-badge class="minus blue12" color="#00f"  avatar  bordered  overlap>
+          <v-badge class="minus blue12" color="#A9A9A9"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
                 {{dislikes}}
@@ -115,7 +116,6 @@ style="height: 200px"
 
   },
   data:() =>({
-    snackbar: true,
     visible:false,
     comment:"5",
     file:'',
@@ -199,17 +199,29 @@ style="height: 200px"
     z-index:4;
   }
 
-
-  .minus
-  {
-    bottom: 45px;
-    right: 130px;
+  .hover{
+    opacity: 0;
+    position:absolute;
+    left: 690px;
+    top: 440px;
+    width: 254px;
+    height: 80px;
+    background: #fff;
+    z-index: 1;
   }
+.gallery__item--2:hover .hover{
+  transition:1s;
+  opacity: 1;
+}
+
+
   .coment2{
     left: 720px;
     top: 450px;
-    background:grey;
+    background: #fff;
+    color:grey !important;
     opacity: 0;
+    z-index: 2;
   }
 
   .gallery__item--2:hover .coment2{
@@ -219,23 +231,29 @@ style="height: 200px"
 .green12{
     left: 750px;
     top: 450px;
-    background:grey;
     opacity: 0;
   }
   .gallery__item--2:hover .green12{
+    background: #fff;
+    color:grey !important;
     transition:1s;
       opacity: 1;
+      z-index: 2;
     }
 
   .blue12{
       left: 490px;
       top: 450px;
-      background:grey;
+      background: #fff;
+      color:grey !important;
       opacity: 0;
+      z-index: 2;
+
     }
 
     .gallery__item--2:hover .blue12{
       transition:1s;
+      background: #fff;
         opacity: 1;
       }
     input[type="file"]{
@@ -261,6 +279,7 @@ style="height: 200px"
   .blue10 {
     right: 320px;
     bottom: 190px;
+    background: #ddd;
   }
 
   .pictext{
@@ -287,8 +306,8 @@ style="height: 200px"
   }
 
   .container1 img{
-  height: 560px;
-  width: 450px;
+  height: 577px;
+  width: 500px;
   }
 
   p {

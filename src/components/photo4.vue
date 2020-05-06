@@ -69,6 +69,7 @@
         <h2></h2>
         <p></p>
         <div class="icon3">
+          <div class="hover4"></div>
           <v-badge class="coment4" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
@@ -211,11 +212,28 @@
     margin-left: 55px;
     margin-top: 310px;
   }
-  .coment4{
 
-    left: 815px;
+  .hover4{
+    position:absolute;
+    opacity: 0;
+    left: 910px;
+    top: 110px;
+    width: 162px;
+    height: 80px;
+    background: #fff;
+    z-index: 1;
+  }
+
+    .gallery__item--4:hover .hover4{
+    opacity: 1;
+    transition:1s;
+  }
+
+  .coment4{
+    background: #fff;
+    color:grey !important;
+    left: 765px;
     top: 120px;
-    background:grey;
     opacity: 0;
     z-index: 3;
     width: 40px;
@@ -224,8 +242,9 @@
 
   .green3
   {
-    left: 910px;
-    background: grey;
+    left: 970px;
+    background: #fff;
+    color:grey !important;
     top: 80px;
     opacity: 0;
     z-index: 3;
@@ -252,7 +271,8 @@
     width: 40px;
     left: 870px;
     top: 50px;
-    background: grey;
+    background: #fff;
+    color:grey !important;
     opacity: 0;
     z-index: 3;
   }

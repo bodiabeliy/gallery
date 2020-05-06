@@ -40,7 +40,7 @@ style="height: 200px"
 <v-text-field label="Type your nickname here..."></v-text-field>
 </div>
 <v-textarea auto-grow  outlined  rows="1" row-height="15" class="ShowDialog" placeholder="Add your comment..."></v-textarea>
-<v-badge class="plus" color="#00f"  avatar  bordered  overlap>
+<v-badge class="plus" color="#A9A9A9"  avatar  bordered  overlap>
 <template v-slot:badge>
 <v-avatar>
 {{likes}}
@@ -51,7 +51,7 @@ style="height: 200px"
 <i class="fa fa-thumbs-up"></i>
 </v-avatar>
 </v-badge>
-<v-badge class="minus" color="#00f"  avatar  bordered  overlap>
+<v-badge class="minus" color="#A9A9A9"  avatar  bordered  overlap>
     <template v-slot:badge>
       <v-avatar>
         {{dislikes}}
@@ -69,7 +69,8 @@ style="height: 200px"
       <h2></h2>
       <p></p>
       <div class="icon2">
-        <v-badge class="coment3" color="#00f"  avatar  bordered  overlap>
+        <div class="hover3"></div>
+        <v-badge class="coment3" color="#A9A9A9"  avatar  bordered  overlap>
           <template v-slot:badge>
             <v-avatar>
               {{comment}}
@@ -81,7 +82,7 @@ style="height: 200px"
           </v-avatar>
         </v-badge>
 
-        <v-badge class="plus green2" color="#00f"  avatar  bordered  overlap>
+        <v-badge class="plus green2" color="#A9A9A9"  avatar  bordered  overlap>
           <template v-slot:badge>
             <v-avatar >
               {{likes}}
@@ -92,7 +93,7 @@ style="height: 200px"
             <i class="fa fa-thumbs-up"></i>
             </v-avatar>
         </v-badge>
-        <v-badge class="minus blue2" color="#00f"  avatar  bordered  overlap>
+        <v-badge class="minus blue2" color="#A9A9A9"  avatar  bordered  overlap>
           <template v-slot:badge>
             <v-avatar>
               {{dislikes}}
@@ -201,11 +202,20 @@ style="height: 200px"
 
   .minus
   {
-    bottom: 45px;
+    background: #D1D0CE;
+    color: grey !important;
+    bottom: 60px;
     right: 130px;
   }
+
+  .minus:hover{
+    background: #800000;
+    bottom:55px;
+  }
   .plus{
-    bottom: 45px;
+    background: grey;
+    bottom:37px;
+    right: 85px;
   }
     input[type="file"]{
     position: absolute;
@@ -331,16 +341,20 @@ style="height: 200px"
   .coment3{
     left: 40px;
     top: 60px;
-    background:grey;
+    background: #fff;
+    color:grey !important;
     opacity: 0;
+    z-index: 2;
   }
 
   .green2
   {
-    background: grey;
+    background: #fff;
+    color:grey !important;
     left: 55px;
     top: 63px;
     opacity: 0;
+    z-index: 2;
   }
 
   .gallery__item--3:hover .green2
@@ -350,12 +364,31 @@ style="height: 200px"
     opacity: 1;
   }
 
+  .hover3{
+    position:absolute;
+    opacity: 0;
+    left: 965px;
+    top: 190px;
+    width: 162px;
+    height: 60px;
+    background: #fff;
+    z-index: 1;
+  }
+.gallery__item--3:hover .hover3{
+  opacity: 1;
+  transition:1s;
+}
+
+
   .blue2
   {
-    background: grey;
+    background: #fff;
+    color:grey !important;
     right: 230px;
     top: 63px;
     opacity: 0;
+    z-index: 2;
+
   }
   .gallery__item--3:hover .coment3{
     transition:1s;

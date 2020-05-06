@@ -185,6 +185,7 @@ style="height: 200px"
 <style>
   .icon
   {
+    opacity: 0;
     padding: 0;
     margin-left: 250px;
     margin-top:120px;

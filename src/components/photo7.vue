@@ -68,8 +68,20 @@ style="height: 200px"
       <div class="text">
         <h2></h2>
         <p></p>
-        <div class="icon1">
-          <v-badge class="plus green1" color="#00f"  avatar  bordered  overlap>
+        <div class="icon7">
+          <v-badge class="coment7" color="#00f"  avatar  bordered  overlap>
+            <template v-slot:badge>
+              <v-avatar>
+                {{comment}}
+              </v-avatar>
+            </template>
+
+            <v-avatar size="40">
+              <i class="fa fa-commenting" aria-hidden="true"></i>
+            </v-avatar>
+          </v-badge>
+
+          <v-badge class="plus green6" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar >
                 {{likes}}
@@ -80,8 +92,7 @@ style="height: 200px"
               <i class="fa fa-thumbs-up"></i>
               </v-avatar>
           </v-badge>
-
-          <v-badge class="minus blue1" color="#00f"  avatar  bordered  overlap>
+          <v-badge class="minus blue6" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
                 {{dislikes}}
@@ -92,7 +103,7 @@ style="height: 200px"
               <i class="fa fa-thumbs-down" aria-hidden="true"></i>
             </v-avatar>
           </v-badge>
-         </div>
+        </div>
       </div>
   </figure>
 </template>
@@ -182,7 +193,81 @@ style="height: 200px"
 </script>
 
 <style>
-  .plus{
-    margin-right: 880px;
+    .icon7
+    {
+      position:absolute;
+      margin-left: 660px;
+      margin-top: 300px;
+    }
+
+  .coment7{
+
+    right: 655px;
+    top: 370px;
+    background: #D1D0CE;
+    color:grey !important;
+        opacity: 0;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+  }
+
+  .plus.green6
+  {
+    background: #D1D0CE;
+    color:grey !important;
+        right: 390px;
+    top: 330px;
+    opacity: 0;
+    z-index: 3;
+  }
+  .gallery__item--7:hover .coment7
+  {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
+  .gallery__item--7:hover .green6
+  {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    z-index: 3;
+  }
+
+
+  .minus.blue6
+  {
+    right: 470px;
+    top: 250px;
+    width: 40px;
+    margin-top: 50px;
+    background: #D1D0CE;
+    color:grey !important;
+        opacity: 0;
+    z-index: 3;
+  }
+
+  .gallery__item--7:hover .blue6
+  {
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+  }
+
+  .gallery__item--7:hover .coment7{
+    transition:1s;
+      opacity: 1;
+    }
+  .gallery__item--7:hover .green6
+  {
+    transition:1s;
+    opacity: 1;
+  }
+  .gallery__item--7:hover .blue6
+  {
+    transition:1s;
+    opacity: 1;
   }
 </style>
