@@ -18,6 +18,7 @@
     }),
 
     methods:{
+      //взагалі не робить
       Upload() {
         let formData = new FormData();
         formData.append('file', this.file);
@@ -33,12 +34,12 @@
           console.log('FAILURE!!');
         });
 
-        /*
+    //вікно завантаження але загружає на сайт
          this.$refs.file.click();
          const load = new FormData();
          load.append('image', this.image)
-         axios.post('http://localhost:3000');
-         */
+         axios.post('http://localhost:8080');
+
 
       },
       //функція яка знаходить перший обраний об'єкт
