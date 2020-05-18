@@ -18,17 +18,33 @@
     }),
 
     methods:{
-      Upload() {  //
+      Upload() {
+        let formData = new FormData();
+        formData.append('file', this.file);
+        axios.post('/gallery',
+        formData,
+        {
+          // де взяти конфиг для запроса,
+          //который позволяет добавить к нему другие заголовки
+        }).then(function(){
+          console.log('SUCCESS!!');
+        })
+        .catch(function(){
+          console.log('FAILURE!!');
+        });;
+
+        /*
          this.$refs.file.click();
          const load = new FormData();
          load.append('image', this.image)
          axios.post('http://localhost:3000');
+         */
 
       },
       //функція яка знаходить перший обраний об'єкт
-      ChangeFile(event)
+      ChangeFile()
       {
-        this.image = event.target.files[0]
+        this.file = this.$refs.file.files[0]
       },
     }
   }
