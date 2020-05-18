@@ -200,6 +200,7 @@ style="height: 200px"
     z-index:4;
   }
 
+
   .minus
   {
     background: #D1D0CE;

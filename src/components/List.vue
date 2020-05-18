@@ -6,16 +6,10 @@
                <photo3></photo3>
                <photo4></photo4>
                <photo5></photo5>
-                <photo6></photo6>
-                <photo7></photo7>
-                <photo8></photo8>
-               <figure class="gallery__item gallery__item--9" >
-                 <v-card>
-                   <v-icon class="fas fa-plus-circle" large @click="Upload()" >fas fa-plus-circle</v-icon>
-                   <v-card-subtitle class="pictext">Add your <br>picture</v-card-subtitle>
-                   <input type="file" @change="ChangeFile()" ref="file"  accept="image/*"/>
-                 </v-card>
-               </figure>
+               <photo6></photo6>
+               <photo7></photo7>
+               <photo8></photo8>
+               <AddPhotos></AddPhotos>
            </div>
        </div>
 
@@ -29,8 +23,7 @@
   import photo6 from './photo6'
   import photo7 from './photo7'
   import photo8 from './photo8'
-
-  import axios from 'axios';
+  import AddPhotos from './AddPhotos'
   export default {
     components:{
       photo1,
@@ -40,83 +33,11 @@
       photo5,
       photo6,
       photo7,
-      photo8
-    },
-  data:() =>({
-    snackbar: true,
-    visible:false,
-    comment:"5",
-    file:'',
-    image:null,
-    likes:0,
-    dislikes:0,
-    newTodoText: '',
-    photo2: "https://picsum.photos/499/432?random",
-
-
-
-  //массив комментариев (мини-бот)
- todos: [
-   {
-     id: 1,
-     title: ''
-   },
-   {
-     id: 2,
-     title: ''
-   },
-   {
-     id: 3,
-     title: ''
-   },
-   {
-     id: 4,
-     title: ''
-   },
-   {
-     id: 5,
-     title: ''
-   }
- ],
-
-
- nextTodoId: 6
-  }),
-  methods: {
-    addNewTodo() {
-    this.todos.push({
-      id: this.nextTodoId++,
-      title: this.newTodoText
-    })
-    this.newTodoText = ''
-  },
-  count_comment(){
-    this.comment++;
-  },
-    //фунція відстежування натиску на кнопку
-    Upload() {  //
-       this.$refs.file.click();
-       const load = new FormData();
-       load.append('image', this.image)
-       axios.post('http://localhost:3000');
-
-    },
-    //функція яка знаходить перший обраний об'єкт
-    ChangeFile(event)
-    {
-      this.image = event.target.files[0]
-    },
-
-
-    like(){
-      this.likes++
-    },
-    dislike(){
-      this.dislikes++
-    },
-
+      photo8,
+      AddPhotos
+    }
   }
-}
+
 
 </script>
 
@@ -247,23 +168,6 @@ body {
 
 
 
-.gallery__item--9 {
-
-    grid-column-start: 10;
-    grid-column-end: 12;
-    grid-row-start: 6;
-    grid-row-end: 8;
-    background: #fff;
-}
-
-.v-icon
-{
-  width:60px;
-  height:60px;
-  margin-left:60px;
-  margin-top:60px;
-}
-
 
 @media (min-width: 1800px)
 {
@@ -279,19 +183,6 @@ body {
   width:100%;
   z-index:3
   }
-
-  form{
-  outline: 2px dashed grey; /* обводка*/
-  outline-offset: -10px;
-  background: Aquamarine;
-  color: dimgray;
-  padding: 10px 10px;
-  height: 200px;
-  position: relative;
-  cursor: pointer;
-  }
-
-
 
   .icon
   {
@@ -384,27 +275,12 @@ body {
   width:100%;
   }
 
-  form{
-  outline: 2px dashed grey; /* обводка*/
-  outline-offset: -10px;
-  background: Aquamarine;
-  color: dimgray;
-  padding: 10px 10px;
-  height: 250px;
-  position: relative;
-  cursor: pointer;
-  }
-
-
-
   .icon
   {
     padding: 0;
     margin-left: 500px;
     margin-top:190px;
   }
-
-
 
   .icon1
   {

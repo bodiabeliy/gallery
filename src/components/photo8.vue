@@ -69,6 +69,7 @@ style="height: 200px"
         <h2></h2>
         <p></p>
         <div class="icon8">
+          <div class="hover8"></div>
           <v-badge class="coment8" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
@@ -198,20 +199,34 @@ style="height: 200px"
   margin-bottom: -25px;
 }
 
-
-
 .icon8{
 
   position:absolute;
   top: 700px;
   left: 450px;
-  background: #D1D0CE;
+  background: #fff;
   color:grey !important;
-    width: 40px;
+  width: 40px;
   height: 40px;
+  z-index: 3;
 
 }
 
+.hover8{
+  position:absolute;
+  opacity: 0;
+  right: -453px;
+  bottom: -7px;
+  width: 530px;
+  height: 80px;
+  background: #fff;
+  z-index: -1;
+}
+
+  .gallery__item--8:hover .hover8{
+    opacity: 1;
+    transition:1s;
+  }
 
 .coment8{
   opacity: 1;
@@ -221,15 +236,18 @@ style="height: 200px"
     opacity: 0;
     left: 340px;
     bottom: 40px;
-    background: #D1D0CE;
-    color:grey !important;  }
+    background: #fff;
+    color:grey !important;
+    z-index: 3;
+   }
   .blue7
   {
     opacity: 0;
     left: 420px;
-    bottom: 70px;
-    background: #D1D0CE;
+    bottom: 65px;
+    background: #fff;
     color:grey !important;
+    z-index: 2;
    }
 
   .gallery__item--8:hover .coment8{

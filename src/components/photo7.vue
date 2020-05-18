@@ -69,6 +69,7 @@ style="height: 200px"
         <h2></h2>
         <p></p>
         <div class="icon7">
+          <div class="hover7"></div>
           <v-badge class="coment7" color="#00f"  avatar  bordered  overlap>
             <template v-slot:badge>
               <v-avatar>
@@ -199,14 +200,29 @@ style="height: 200px"
       margin-left: 660px;
       margin-top: 300px;
     }
+    .hover7{
+      position:absolute;
+      opacity: 0;
+      right: 610px;
+      top: 355px;
+      width: 252px;
+      height: 70px;
+      background: #fff;
+      z-index: 1;
+    }
+
+      .gallery__item--7:hover .hover7{
+        opacity: 1;
+        transition:1s;
+      }
 
   .coment7{
 
     right: 655px;
     top: 370px;
-    background: #D1D0CE;
+    background: #fff;
     color:grey !important;
-        opacity: 0;
+    opacity: 0;
     z-index: 3;
     width: 40px;
     height: 40px;
@@ -214,7 +230,7 @@ style="height: 200px"
 
   .plus.green6
   {
-    background: #D1D0CE;
+    background: #fff;
     color:grey !important;
         right: 390px;
     top: 330px;
@@ -243,7 +259,7 @@ style="height: 200px"
     top: 250px;
     width: 40px;
     margin-top: 50px;
-    background: #D1D0CE;
+    background: #fff;
     color:grey !important;
         opacity: 0;
     z-index: 3;

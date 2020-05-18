@@ -279,7 +279,7 @@ style="height: 200px"
   .blue10 {
     right: 320px;
     bottom: 190px;
-    background: #ddd;
+    background: #D1D0CE;
   }
 
   .pictext{
