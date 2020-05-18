@@ -31,7 +31,7 @@
         })
         .catch(function(){
           console.log('FAILURE!!');
-        });;
+        });
 
         /*
          this.$refs.file.click();
