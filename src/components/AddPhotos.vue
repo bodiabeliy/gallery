@@ -18,6 +18,7 @@
     }),
 
     methods:{
+      
       //взагалі не робить
       Upload() {
         let formData = new FormData();
